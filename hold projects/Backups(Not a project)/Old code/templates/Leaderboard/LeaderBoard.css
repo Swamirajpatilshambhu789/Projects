@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  color: white;
+}
+
+body {
+  background-color: black;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.navbarImg {
+  width: 100vw;
+}
+
+.mainContainer {
+  width: 80%;
+  max-width: 800px;
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.leaderboardTitle {
+  color: #ffcc00;
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+
+.leaderboardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.leaderboardHeader,
+.leaderboardRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  color: white;
+}
+
+.leaderboardHeader {
+  font-weight: bold;
+  background-color: #333;
+  color: #ffcc00;
+  border-bottom: 2px solid #ffcc00;
+}
+
+.headerRank,
+.headerUsername,
+.headerScore,
+.rowRank,
+.rowUsername,
+.rowScore {
+  flex: 1;
+  text-align: center;
+}
+
+.leaderboardRow:nth-child(even) {
+  background-color: #2b2b2b;
+}
+
+.leaderboardRow:hover {
+  background-color: #333;
+}
+
+.rowRank,
+.rowUsername,
+.rowScore {
+  font-size: 18px;
+}
+.quizpagesender{
+    cursor: pointer;
+    font-size: 40px;
+    font-family: inter;
+    background-color: #161616;
+    padding: 5px;
+    border-radius: 10px;
+  }

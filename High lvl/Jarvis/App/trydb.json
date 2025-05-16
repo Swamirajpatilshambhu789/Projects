@@ -1,0 +1,47 @@
+[
+    {
+        "username": "sap",
+        "password": "shambhu@7890"
+    },
+    {
+      "id": 1,
+      "username": "jdoe",
+      "email": "jdoe@example.com",
+      "fullName": "John Doe",
+      "passwordHash": "$2b$10$abcdefg1234567hashedpassword",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "username": "asmith",
+      "email": "asmith@example.com",
+      "fullName": "Alice Smith",
+      "passwordHash": "$2b$10$anotherhashgoeshere1234567",
+      "role": "user"
+    },
+    {
+      "id": 3,
+      "username": "bwayne",
+      "email": "bwayne@wayneenterprises.com",
+      "fullName": "Bruce Wayne",
+      "passwordHash": "$2b$10$supersecurehashedpassword456",
+      "role": "moderator"
+    },
+    {
+      "id": 4,
+      "username": "ckent",
+      "email": "ckent@dailyplanet.com",
+      "fullName": "Clark Kent",
+      "passwordHash": "$2b$10$hashedvalueforckent321",
+      "role": "user"
+    },
+    {
+      "id": 5,
+      "username": "dprince",
+      "email": "dprince@themyscira.gov",
+      "fullName": "Diana Prince",
+      "passwordHash": "$2b$10$fakehashforuser555",
+      "role": "admin"
+    }
+  ]
+  

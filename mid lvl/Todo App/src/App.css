@@ -1,0 +1,119 @@
+.headimg{
+  width: 100%;
+}
+
+body{
+  background-color: black;
+  overflow-y: hidden;
+}
+
+.main{
+  border: 2px solid white;
+  height: 85vh;
+  margin-left: 30vw;
+  margin-right: 30vw;
+  margin-top: 5vh;
+  background-color: rgb(15, 15, 15);
+}
+
+.mainhead{
+  border-bottom: 2px solid black;
+  font-size: 40px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: monospace;
+}
+
+.add{
+  border-bottom: 2px solid black;
+  display: grid;
+  /* justify-content: center; */
+  align-items: baseline;
+  height: 50px;
+  grid-template-rows: 30px 20px;
+}
+
+.fill{
+  display: flex;
+  align-items: baseline;
+  grid-row: 1/2;
+  justify-content: center;
+  gap:10px;
+}
+
+.att{
+  color: white;
+}
+
+.addtodo{
+  background: transparent;
+  border-radius: 5px;
+  height: 20px;
+  color: white;
+}
+
+.addb{
+  background-color: rgb(34, 34, 34);
+  border-radius: 5px;
+  width: 70px;
+  height: 20px;
+  justify-self:baseline;
+  grid-row: 2/3;
+  margin-left: 280px;
+  margin-right: 302.45px;
+}
+
+.todocompo{
+  margin: 10px;
+  margin-left: 15px;
+  border: 2px solid black;
+  color: white;
+  display: grid;
+  align-items: center;
+  /* justify-content: center; */
+  height: 25px;
+  grid-template-columns: 2.5% 77.5% 20%;
+}
+
+
+.name{
+  margin-left: 15px;
+  grid-column: 2/3;
+}
+
+.don{
+  grid-column: 1/2;
+}
+
+.options{
+  display: flex;
+  gap: 5px;
+  grid-column: 3/4;
+}
+
+.btc{
+  color: white;
+  padding: 3px;
+  border-radius: 5px;
+  background: transparent;
+}
+
+.delete{
+  margin-right: 10px;
+}
+
+
+
+.edittodo{
+  margin-left: 20px;
+  background: transparent;
+  border-radius: 5px;
+  height: 20px;
+  color: white; 
+}
+
+.optionse{
+  grid-column: 2/3;
+}

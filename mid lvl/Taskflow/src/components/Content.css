@@ -1,0 +1,6 @@
+.content {
+  display: grid;
+  grid-template-columns: 15% 70%;
+  grid-template-rows: 100vh;
+  background-color: #585858;
+}

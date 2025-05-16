@@ -1,0 +1,253 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.head {
+    color: rgb(241, 227, 227);
+    background-color: #292929;
+    height: 31px;
+    display: flex;
+    gap: 10px;
+    border: 1px ridge rgb(0, 0, 0);
+    align-items: center;
+    justify-content: center;
+}
+
+.name {
+    padding: 5px;
+}
+
+.img {
+    padding: 2px;
+}
+
+.main {
+    /* width: 100%; */
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 19.80% 80.20%;
+}
+
+.sidebar {
+    grid-column: 1/2;
+    height: 95vh;
+    background: #272727;
+    border-right: 1px ridge rgb(0, 0, 0);
+    border-left: 3px ridge rgb(0, 0, 0);
+    border-bottom: 1px ridge rgb(0, 0, 0);
+    display: grid;
+    grid-template-rows: 50% 50%;
+}
+
+.maindis {
+    border-right: 1px ridge rgb(0, 0, 0);
+    border-bottom: 1px ridge rgb(0, 0, 0);
+    height: 95vh;
+    background-color: #212121;
+    grid-column: 2/3;
+    flex-direction: column;
+    display: flex;
+    gap:50px
+}
+
+.default {
+    grid-row: 1/2;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px ridge black;
+}
+
+.custom {
+    grid-row: 2/3;
+}
+
+.title {
+    margin-top: 30px;
+    margin-left: 50px;
+    width: 89.2%;
+    height: 12.84%;
+    background: #2D2D2D;
+    color: white;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    border-radius: 10px;
+}
+
+.tt {
+    padding-left: 50px;
+}
+
+.task {
+    border-radius: 15px;
+    width: 89.2%;
+    margin-top: 30px;
+    margin-left: 50px;
+    background-color: #1b1b1b;
+    height: 78.95%;
+}
+.etasks {
+    display: grid;
+    margin: 5px;
+    margin-top: 50px;
+    height: 50px;
+    color: white;
+    gap: 20px;
+    grid-template-columns: 10% 50%;
+
+}
+.dtasks {
+    display: grid;
+    margin: 5px;
+    margin-top: 50px;
+    height: 50px;
+    color: white;
+    gap: 20px;
+    grid-template-columns: 10% 30%;
+}
+
+.text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 2/3;
+    font-size: 30px;
+}
+
+.imgs {
+    grid-column: 1/2;
+}
+
+.myday{ 
+    margin-top: 20px;
+    margin-left: 5px;
+}
+.takst{
+    margin-left: 5px;
+}
+.important{
+    margin-left: 5px;
+}
+
+.planned{
+    margin-left: 2px;
+}
+.ctasks {
+    display: grid;
+    margin: 15x;
+    margin-left: 10px;
+    margin-top: 50px;
+    height: 50px;
+    color: white;
+    gap: 20px;
+    grid-template-columns: 1% 50%;
+}
+
+.imgss{
+    background-color: #272727;
+    padding: 0;
+    margin: 0;
+}
+
+.add{
+    display: flex;
+    height: 30px;
+    gap:4px;
+    border-bottom: 2px ridge black;
+    margin-top: 2px;
+}
+
+.addb{
+    background-color: 272727;
+    height: 5px;
+    border:none;
+    margin-top: 5px;
+}
+
+.textfa{
+    margin-left: 5px;
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+}
+
+.taski{
+    margin: 50px;
+    border: 2px ridge black;
+    border-radius: 5px;
+    display:  flex;
+    gap:20px;
+}
+.message{
+    font-size: 70px;
+}
+.don{
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.addtas{
+    align-items: center;
+    margin: 50px;
+    display:  flex;
+    height: 50px;
+    font-size: 30px;
+    border-radius: 5px;
+    border: 2px ridge black ;
+}
+
+.buttontoc{
+    display:  flex;
+    flex-direction: column-reverse; 
+    display: grid; 
+    background-color: transparent;
+    border: none;
+    width:40vh;
+}
+/* Existing CSS styles... */
+
+/* Media query for tablets and smaller screens */
+@media screen and (max-width: 1024px) {
+    .main {
+      grid-template-columns: 30% 70%;
+    }
+  
+    .sidebar {
+      grid-template-rows: 40% 60%;
+    }
+  }
+  
+  /* Media query for mobile devices */
+  @media screen and (max-width: 768px) {
+    .main {
+      grid-template-columns: 100%;
+    }
+  
+    .sidebar {
+      display: none;
+    }
+  
+    .maindis {
+      grid-column: 1/2;
+      border-right: none;
+    }
+  
+    .title {
+      margin-left: 5%;
+      font-size: 30px;
+      text-align: center;
+    }
+  
+    .task {
+      margin: 20px;
+      font-size: 20px;
+    }
+  }
+
+  @media (max-height: 1010px) {
+    .sidebar{
+        grid-template-rows: 70% 30%;
+    }
+}

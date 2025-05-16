@@ -1,0 +1,27 @@
+// // main.js (Main process)
+// const { app, BrowserWindow } = require('electron');
+// const path = require('path');
+
+// function createWindow() {
+//   const mainWindow = new BrowserWindow({
+//     width: 800,
+//     height: 600,
+//     icon: path.join(__dirname, 'Logo.png') // Corrected path to your icon file
+//   });
+
+//   mainWindow.loadURL('http://localhost:3000'); // Or wherever your React app is served
+// }
+
+// app.on('ready', createWindow);
+
+// app.on('window-all-closed', () => {
+//   if (process.platform !== 'darwin') {
+//     app.quit();
+//   }
+// });
+
+// app.on('activate', () => {
+//   if (BrowserWindow.getAllWindows().length === 0) {
+//     createWindow();
+//   }
+// });

@@ -1,0 +1,17 @@
+{
+  "name": "QuizHut",
+  "version": "1.0.0",
+  "description": "This is a quiz website with a leaderboard ",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Swamiraj Patil",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "mongoose": "^8.8.0"
+  }
+}

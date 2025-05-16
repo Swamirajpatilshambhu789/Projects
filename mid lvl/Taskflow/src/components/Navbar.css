@@ -1,0 +1,11 @@
+.Navbar {
+  background-color: #212121;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  font-size: 20px;
+  width: 100%;
+  overflow: hidden;
+}

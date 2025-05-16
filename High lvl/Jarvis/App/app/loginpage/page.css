@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Orbitron:wght@600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    color: white;
+    padding: 0px;
+    margin: 0px;
+}
+
+.page{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+*{
+    color: white;
+
+}
+.navbar{
+    height: 30px;
+    position: absolute;
+    top: 10vh;
+    border-radius: 181;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 30px;
+    background: linear-gradient(to right, #282828, #818181, #9C9C9C,#DDDDDD);;
+
+}
+.navbarcontent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Orbitron", sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    background: linear-gradient(to right, #181818, #5e5e5e);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+  
+  @property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+  
+  @property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+  
+  .navbar::after, .navbar::before{
+    content: '';
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    border-radius: 181px;
+    animation: 3s spin linear infinite;
+  }
+  .navbar::before{
+    filter: blur(1.5rem);
+    opacity: 0.5;
+  }
+  @keyframes spin{
+    from{
+      --angle: 0deg;
+    }
+    to{
+      --angle: 360deg;
+    }
+  }
+.main{
+    position: absolute;
+    top: 25vh;
+    height: 50vh;
+    width:50vw;
+    bottom: 25vh;
+    left: 25vw;
+    right: 25vw;
+    background-color: #282828;
+    border-radius: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.main::after, .main::before{
+    content: '';
+    position:absolute;
+    height: 100%; 
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    border-radius: 181px;
+    animation: 3s spin linear infinite;
+  }
+  .main::before{
+    filter: blur(1.5rem);
+    opacity: 0.5;
+  }
+  @keyframes spin{
+    from{
+      --angle: 0deg;
+    }
+    to{
+      --angle: 360deg;
+    }
+  }
+  .spline-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50vw;
+    height: 50vh;
+    z-index: 1;
+    overflow: hidden;
+}
+.loginbtn{
+  border-style: none;
+  background: linear-gradient(to right, #202020, #5C5C5C);
+  width: 35%;
+  height: 13%;
+  position: absolute;
+  bottom: 5vh;
+  border-radius: 50px;
+  font-family: 'Orbitron';
+  font-size: 5vh;
+  font-weight: 300;
+}
+.loginbtn::after, .loginbtn::before{
+  content: '';
+  position:absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 3px;
+  border-radius: 50px;
+  animation: 3s spin linear infinite;
+}
+.loginbtn::before{
+  filter: blur(1.5rem);
+  opacity: 0.5;
+}
+
+.headofformscontent{
+  font-size: 4vh;
+
+}
+.formhandler{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.usernamegetter{
+  background: #373737;
+  width:80%;
+  /* display: flex; */
+  text-align: center;
+  font-family: 'Orbitron  ';
+  margin-bottom: 3vh;
+  border-radius: 50px;
+}
+.passwordgetter{
+  border-radius: 50px;
+  background: #373737;
+  width:80%;
+  /* display: flex; */
+  text-align: center;
+  font-family: 'Orbitron  ';
+}
+.loginbtninform{
+  border-style: none;
+  background: linear-gradient(to right, #202020, #5C5C5C);
+  width: 35%;
+  height: 13%;
+  position: absolute;
+  bottom: 5vh;
+  border-radius: 50px;
+  font-family: 'Orbitron';
+  font-size: 4vh;
+  font-weight: 300; 
+  text-align: center;
+}
