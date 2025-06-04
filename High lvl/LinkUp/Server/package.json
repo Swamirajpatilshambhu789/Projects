@@ -1,0 +1,21 @@
+{
+  "name": "linkup",
+  "version": "1.0.0",
+  "description": "This is an chat app",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon server"
+  },
+  "author": "Swamiraj Patil",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "mongoose": "^8.15.1",
+    "nodemon": "^3.1.10",
+    "socket.io": "^4.7.4"
+  }
+}
