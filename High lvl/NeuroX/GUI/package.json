@@ -1,0 +1,16 @@
+{
+  "name": "neurox",
+  "version": "1.0.0",
+  "description": "This is an app which will give you answers based on the image u gaev",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Swamiraj Patil",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  }
+}

@@ -1,0 +1,345 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NeuroX</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        color: white;
+      }
+
+      body {
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      .navbar {
+        width: 100vw;
+        height: 50px;
+      }
+
+      .Navtext {
+        position: absolute;
+        top: 10px;
+        right: 47vw;
+        left: 47vw;
+        font-size: 1.9vw;
+      }
+
+      .main {
+        position: absolute;
+        top: 28vh;
+        background-color: #2b2b2b;
+        width: 50vw;
+        height: 50vh;
+        border-radius: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .question {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .input_tag {
+        width: 40vw;
+        height: 50px;
+        border-radius: 10px;
+        background-color: #252525;
+        font-size: 2vw;
+      }
+
+      .question_inp {
+        width: 100%;
+        border-radius: 10px;
+        background-color: #252525;
+        height: 100%;
+      }
+
+      .submitbtn {
+        width: 10vw;
+        height: 50px;
+        border-radius: 10px;
+        background-color: #252525;
+      }
+
+      .submitbtn:hover {
+        background-color: #5d5d5d;
+      }
+
+      .Submit_question {
+        width: 100%;
+        height: 100%;
+        background-color: #252525;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url("./assets/send_btn.png");
+        background-size: 40%;
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      .Submit_question:hover {
+        background-color: #5d5d5d;
+      }
+
+      .select_photos:hover {
+        background-color: #5d5d5d;
+      }
+
+      .select_photos {
+        width: 80%;
+        height: 50px;
+        border-radius: 10px;
+        background-color: #3d3d3d;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="Header">
+      <img class="navbar" src="./assets/Rectangle 1.png" alt="" />
+      <div class="Navtext">NeuroX</div>
+    </div>
+    <div class="main">
+      <div class="question">
+        <div class="input_tag">
+          <input id="query_input" class="question_inp" type="text" />
+        </div>
+        <div class="submitbtn">
+          <button
+            background-image="./assets/send_btn.png"
+            class="Submit_question"
+          ></button>
+        </div>
+      </div>
+
+       ADDED response box so client script can display the reply 
+      <div id="response_box" style="width:80%; padding:12px; text-align:left;"></div>
+
+      <div class="select_photos">
+        <input class="Photos" type="file" name="" id="" />
+      </div>
+    </div>
+    <script>
+      const queryInput = document.querySelector("#query_input");
+      const submitBtn = document.querySelector(".Submit_question");
+      const responseBox = document.getElementById("response_box");
+
+      submitBtn.addEventListener("click", async () => {
+        const q = queryInput.value.trim();
+        if (!q) {
+          responseBox.innerHTML = "⚠️ Please enter a question.";
+          return;
+        }
+
+        responseBox.innerHTML = "⏳ Processing... please wait.";
+
+        try {
+          const resp = await fetch("/ask", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ query: q }),
+          });
+
+          const data = await resp.json();
+          if (resp.ok && data.response) {
+            responseBox.innerHTML = `<strong>🧠 Response:</strong><br>${data.response}`;
+          } else {
+            responseBox.innerHTML = `❌ ${data.error || "Unexpected server error"}`;
+          }
+        } catch (e) {
+          responseBox.innerHTML = `❌ ${e.message}`;
+        }
+      });
+    </script>
+  </body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NeuroX</title>
+    <link rel="stylesheet" href="/style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        color: white;
+        font-family: "Inter", sans-serif;
+      }
+
+      body {
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      .navbar {
+        width: 100vw;
+        height: 50px;
+      }
+
+      .Navtext {
+        position: absolute;
+        top: 10px;
+        right: 47vw;
+        left: 47vw;
+        font-size: 1.9vw;
+      }
+
+      .main {
+        position: absolute;
+        top: 28vh;
+        background-color: #2b2b2b;
+        width: 50vw;
+        height: 50vh;
+        border-radius: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .question {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .input_tag {
+        width: 40vw;
+        height: 50px;
+        border-radius: 10px;
+        background-color: #252525;
+        font-size: 2vw;
+      }
+
+      .question_inp {
+        width: 100%;
+        border-radius: 10px;
+        background-color: #252525;
+        height: 100%;
+      }
+
+      .submitbtn {
+        width: 10vw;
+        height: 50px;
+        border-radius: 10px;
+        background-color: #252525;
+      }
+
+      .submitbtn:hover {
+        background-color: #5d5d5d;
+      }
+
+      .Submit_question {
+        width: 100%;
+        height: 100%;
+        background-color: #252525;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url("./assets/send_btn.png");
+        background-size: 40%;
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      .Submit_question:hover {
+        background-color: #5d5d5d;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="Header">
+      <img class="navbar" src="./assets/Rectangle 1.png" alt="" />
+      <div class="Navtext">NeuroX</div>
+    </div>
+
+    <div class="main">
+      <div class="question">
+        <div class="input_tag">
+          <input id="query_input" class="question_inp" type="text" placeholder="Ask a question..." />
+        </div>
+        <div class="submitbtn">
+          <button class="Submit_question"></button>
+        </div>
+      </div>
+
+      <div id="response_box" style="width:80%; padding:12px; text-align:left;"></div>
+    </div>
+
+    <script>
+      const queryInput = document.querySelector("#query_input");
+      const submitBtn = document.querySelector(".Submit_question");
+      const responseBox = document.getElementById("response_box");
+
+      submitBtn.addEventListener("click", async () => {
+        const q = queryInput.value.trim();
+        if (!q) {
+          responseBox.innerHTML = "⚠️ Please enter a question.";
+          return;
+        }
+
+        responseBox.innerHTML = "⏳ Processing... please wait.";
+
+        try {
+          const resp = await fetch("/ask", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ query: q }),
+          });
+
+          const data = await resp.json();
+          if (resp.ok && data.response) {
+            responseBox.innerHTML = `<strong>🧠 Response:</strong><br>${data.response}`;
+          } else {
+            responseBox.innerHTML = `❌ ${data.error || "Unexpected server error"}`;
+          }
+        } catch (e) {
+          responseBox.innerHTML = `❌ ${e.message}`;
+        }
+      });
+    </script>
+  </body>
+</html>
